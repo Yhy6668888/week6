@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class task3 {
+    public static void main(String[] args) {
+        int number=(int)(Math.random()*10);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Guess a maigc number between 0 and 100");
+        int guess=-1;
+        while(guess!=number)
+        {
+            System.out.println("Enter your guess");
+            guess=sc.nextInt();
+            if(guess==number){
+                System.out.println("Congratulations! You guessed it!");
+            }
+            if(guess<number)
+            {
+                System.out.println("Too low!");
+
+            }
+            if(guess>number)
+            {
+                System.out.println("Too high!");
+            }
+        }
+    }
+}
